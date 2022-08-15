@@ -231,7 +231,7 @@ public class V_DashBoard extends javax.swing.JFrame {
         
         try
         {
-            String path = "jdbc:mysql://localhost/new";
+            String path = "jdbc:mysql://localhost/new1";
             Connection con = DriverManager.getConnection(path,"root","");
             //Statement st = LibraryDatabaseConnection.createConnection().createStatement();
             JasperDesign jdesing = JRXmlLoader.load("F:\\MVC_Lbrary\\src\\view\\issueBook.jrxml");
