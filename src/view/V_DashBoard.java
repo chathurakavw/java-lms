@@ -230,7 +230,7 @@ public class V_DashBoard extends javax.swing.JFrame {
     private void btn_reportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_reportActionPerformed
         
         try
-        {aAa
+        {
             String path = "jdbc:mysql://localhost/new";
             Connection con = DriverManager.getConnection(path,"root","");
             //Statement st = LibraryDatabaseConnection.createConnection().createStatement();
