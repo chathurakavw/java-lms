@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9b3db28d-529c-44a2-a661-c8b4d9bfa112">
+	<property name="ireport.zoom" value="1.2100000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[Select * from issuebook]]>
+	</queryString>
+	<field name="bookId" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="studentId" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="issueDate" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dueDate" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="returnBook" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="bookId">
+		<groupExpression><![CDATA[$F{bookId}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="25" y="13" width="499" height="55" uuid="97617a22-aacd-47fc-8790-9dc3435dcb77"/>
+				<textElement textAlignment="Center">
+					<font size="36" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Library Management System]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="149" y="0" width="242" height="24" uuid="3eeef639-7cba-4ace-88cf-cb784874818a"/>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Issue And Return Book Report]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="25" y="20" width="70" height="20" uuid="8f1fa358-8028-4a0a-852f-5be96bcdfefc"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Book id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="109" y="20" width="73" height="20" uuid="49ed54d1-3c79-4bd0-aac0-6a86f2407d95"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Student id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="20" width="77" height="20" uuid="bbc8a683-36b4-4c09-bb82-e79b393655c6"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Issue Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="20" width="100" height="20" uuid="19056778-2949-4947-bd81-4962a6eee467"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Due Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="443" y="20" width="100" height="20" uuid="c5a101e4-88d7-4c3e-bd6f-f1c248ebf3c3"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Return Book]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="50" splitType="Stretch">
+			<textField>
+				<reportElement x="25" y="17" width="70" height="20" uuid="c326bc88-18d1-4514-855e-fa3364df2f0a"/>
+				<textElement>
+					<font size="12" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bookId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="109" y="17" width="73" height="20" uuid="101eaae8-12d5-4f0e-bda2-17fba8e95613"/>
+				<textElement>
+					<font size="12" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{studentId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="17" width="77" height="20" uuid="6f8c9553-93aa-4176-b716-f1be6cf475d9"/>
+				<textElement>
+					<font size="12" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{issueDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="17" width="100" height="20" uuid="9a5e0d6a-0890-46a2-8734-0155b8f597c4"/>
+				<textElement>
+					<font size="12" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dueDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="443" y="17" width="100" height="20" uuid="500bb1b4-4095-459c-a5c7-f471503f7bb8"/>
+				<textElement>
+					<font size="12" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{returnBook}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
